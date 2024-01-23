@@ -62,7 +62,7 @@ public class PigLatin {
     	    }else if (findFirstVowel(sWord)==2){
 		    return sWord.substring(2,sWord.length()) + sWord.substring(0,2) + "ay";
 	    }else if (findFirstVowel(sWord) >=3){
-		return sWord.sunstring (findFirstVowel(sWord) +1,sWord.length()) + sWord.substring(findFirstVowel(sWord),findFirstVowel(sWord) +1)+"ay";
+		return sWord.substring (findFirstVowel(sWord) +1,sWord.length()) + sWord.substring(findFirstVowel(sWord),findFirstVowel(sWord) +1)+"ay";
 	    }
 	    
 	    else {
