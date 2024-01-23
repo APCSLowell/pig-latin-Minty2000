@@ -31,12 +31,15 @@ public class PigLatin {
         //precondition: sWord is a valid String of length greater than 0.
         //postcondition: returns the position of the first vowel in sWord.  If there are no vowels, returns -1
 	    // your code goes here
-	for (int i = 0; i < sWord.length();i++){
+	String const = "bcdfghjklmnpqrstvwsyz"
+	for (int i = 0; i < sWord.length()-1;i++){
 		if (sWord.substring(i,i+1).equals("a")||sWord.substring(i,i+1).equals("e")||sWord.substring(i,i+1).equals("i")||sWord.substring(i,i+1).equals("o")||sWord.substring(i,i+1).equals("u")){
 			return 1;
 		}else if (sWord.substring(0,2).equals("qu")){
 			return 2;
-	}
+		}else if (sWord.substring(i+1,i+2).equals("a")||sWord.substring(i+1,i+2).equals("e")||sWord.substring(i+1,i+2).equals("i")||sWord.substring(i+1,i+2).equals("o")||sWord.substring(i+1,i+2).equals("u")){
+			return i +1;
+		}
 	}
         return -1;
     
@@ -46,13 +49,15 @@ public class PigLatin {
         //precondition: sWord is a valid String of length greater than 0
         //postcondition: returns the pig latin equivalent of sWord
         // more code should go here
+	    
 	    if(findFirstVowel(sWord) == -1) {
 		    return sWord + "ay";
 	    }else if (findFirstVowel(sWord)== 1){
 		    return sWord + "way";
     	    }else if (findFirstVowel(sWord)==2){
 		    return sWord.substring(2,sWord.length()) + sWord.substring(0,2) + "ay";
-    }
+	    }
+	    
 	    else {
 		return "ERROR!";
 	    }
