@@ -61,12 +61,10 @@ public class PigLatin {
 		    return sWord + "way";
     	    }if (sWord.substring (0,2).equals("qu")){
 		    return sWord.substring(2,sWord.length()) + sWord.substring(0,2) + "ay";
-	    }else if (findFirstVowel(sWord) >=3){
-		return sWord.substring (findFirstVowel(sWord) +1,sWord.length()) + sWord.substring(findFirstVowel(sWord),findFirstVowel(sWord) +1)+"ay";
 	    }
 	    
 	    else {
-		return "ERROR!";
+		return sWord.substring (findFirstVowel(sWord),sWord.length()) + sWord.substring(0,findFirstVowel(sWord) +1)+"ay";
 	    }
     }
 }//end PigLatin class
