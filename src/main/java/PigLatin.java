@@ -37,8 +37,9 @@ public class PigLatin {
 		}else if (sWord.substring(0,2).equals("qu")){
 			return 2;
 	}
+	}
         return -1;
-    }
+    
     }
 
     public String pigLatin(String sWord) {
