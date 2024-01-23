@@ -33,8 +33,8 @@ public class PigLatin {
 	    // your code goes here
 	    if (sWord.substring(0,1).equals("a")||sWord.substring(0,1).equals("e")||sWord.substring(0,1).equals("i")||sWord.substring(0,1).equals("i")||sWord.substring(0,1).equals("u")){
 		return sWord + "way";
-	    }else if(sWord.substring(17,18).equals("qu")){
-		return sWord.substring(2,sWord.length());
+	    }else if(sWord.substring(0,2).equals("qu")){
+		return sWord.substring(2,sWord.length()) + sWord.substring(0,2) + "ay";
 	    }
         return -1;
     }
