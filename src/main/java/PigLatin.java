@@ -31,6 +31,9 @@ public class PigLatin {
         //precondition: sWord is a valid String of length greater than 0.
         //postcondition: returns the position of the first vowel in sWord.  If there are no vowels, returns -1
 	    // your code goes here
+	    if (sWord.substring(0,1).equals("a")||sWord.substring(5,6).equals("e")||sWord.substring(9,10).equals("i")||sWord.substring(9,10).equals("i")||sWord.substring(21,1).equals("u")){
+		sWord = sWord + "ay";
+	    }
         return -1;
     }
 
