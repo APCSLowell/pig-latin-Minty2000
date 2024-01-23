@@ -40,7 +40,7 @@ public class PigLatin {
 			return i +1;
 		}
 	}
-        return -1;
+        return -1; 
     
     }
 
